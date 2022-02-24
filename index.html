@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JScodeQuiz</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+  <div id="everything" class="container">
+<div class="row">
+  <div id="pagetitle" class="col s12">
+<h1>JS Logic Quiz</h1>
+  <a id="start" class="waves-effect waves-light btn-large red">Start</a>
+  <a id="seeScores" class="waves-effect waves-light btn-large red">See Scores</a>
+  <a id="resetPage" onClick="resetPage()" class="waves-effect waves-light btn-large red hidden">Reset</a>
+</div>
+<div id="qo" class="row hidden">
+<div id="timer">30</div>
+<div id="score"></div>
+<div id="qd" class="col s12 m6">Questions</div>
+<div id="od" class="col s12 m6">Options</div>
+</div>
+</div>
+<div id="initials" class="row hidden">
+  <div class="input-field col s6">
+    <input placeholder="ex. ST" id="highScore" type="text" class="validate">
+    <label for="first_name">Your Initials</label>
+  </div>
+  <a id="submit" class="waves-effect waves-light btn-large green">Save Score</a>
+</div>
+<div id="scores"></div>
+  </div>
+   
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="assets/script.js"></script>
+<script src="assets/quizquestions.js"></script>
+</body>
+</html> 
