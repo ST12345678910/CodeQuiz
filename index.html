@@ -10,14 +10,22 @@
 </head>
 <body>
 
+<!-- Creates container for everything to fit inside -->
+
   <div id="everything" class="container">
 <div class="row">
   <div id="pagetitle" class="col s12">
 <h1>JS Logic Quiz</h1>
+
+<!-- the buttons that are preset within the app, reset is hidden on start -->
+
   <a id="start" class="waves-effect waves-light btn-large red">Start</a>
   <a id="seeScores" class="waves-effect waves-light btn-large red">See Scores</a>
   <a id="resetPage" onClick="resetPage()" class="waves-effect waves-light btn-large red hidden">Reset</a>
 </div>
+
+<!-- setting up aspects of the quiz: timer, score, and questions/options -->
+
 <div id="qo" class="row hidden">
 <div id="timer">30</div>
 <div id="score"></div>
@@ -26,6 +34,9 @@
 </div>
 </div>
 <div id="initials" class="row hidden">
+
+  <!-- form for filling in intials and saving score -->
+
   <div class="input-field col s6">
     <input placeholder="ex. ST" id="highScore" type="text" class="validate">
     <label for="first_name">Your Initials</label>

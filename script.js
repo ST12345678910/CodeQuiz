@@ -1,6 +1,10 @@
+  //starts off with question 0, score at 0, and timer with 30 seconds
+  
   curQues = 0
   var score = 0
   var timer = 30
+
+// pulls questions from other doc, then replaces the Question and Answer blanks
 
 function showQues() {
   document.getElementById("qd").innerHTML = `
@@ -27,11 +31,15 @@ function showQues() {
   `
 }
 
+// take value from statement then uses it to fill in score
+
 function displayScore() {
   document.getElementById("score").innerHTML = `
 Score: ${score}
   `
 }
+
+// turns questions/answers to blank, and shows the initials box and scores
 
 function quizCompleted() {
   displayScore()
@@ -42,6 +50,8 @@ function quizCompleted() {
   document.getElementById('initials').classList.remove('hidden')
   document.getElementById('scores').classList.remove('hidden')
 }
+
+//stringifies the users score and adds it to local storage plus console log, the users score is taken from the completion of the quiz, and the initials are entered
 
 document.getElementById('submit').addEventListener('click', function (event) {
     var highScore = {
@@ -68,6 +78,8 @@ ${score.time}
       })
   })
 
+// if the option is correct, then it is console logged, and the score and next question are shown, if the answer is wrong then 10 seconds are subtracted from the timer and Incorrect will appear in the console
+
 document.addEventListener("click", function (event) {
     if (event.target.classList.contains("option")) {
       if (event.target.dataset.option == event.target.dataset.answer) {
@@ -87,6 +99,8 @@ document.addEventListener("click", function (event) {
     }
   })
 
+//starts the timer, then when the times runs out, the statemetn NO MORE TIME is shown and nothing else
+
 function timerFunction() {
   timer -= 1
   document.getElementById('timer').innerHTML = `
@@ -99,6 +113,7 @@ function timerFunction() {
   }
 }
 
+// remove start button when it is pressed, show questions. clears all but reset button
 
   var clearTimer
 document.getElementById("start").addEventListener('click', function (event) {
@@ -111,6 +126,8 @@ document.getElementById("start").addEventListener('click', function (event) {
   document.getElementById('scores').classList.add('hidden')
   document.getElementById('resetPage').classList.remove("hidden")
   })
+
+// takes values from local storage and displays them for the user when they press the "see score" button
 
 document.getElementById('seeScores').addEventListener('click', function (event) {
   var highScore = {
@@ -136,6 +153,8 @@ ${score.time}
     `
   })
 })
+
+// reloads the whole page when the reset button is pressed
 
 function resetPage() {
   window.location.reload();

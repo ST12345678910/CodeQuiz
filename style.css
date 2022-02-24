@@ -1,36 +1,43 @@
+
+/* display nothing when given 'hidden' */
+
 .hidden {
   display: none;
 }
 
+
+/* aligns everything to the middle */
 .container {
   text-align: center;
 }
 
-
-
-
+/* makes the title purple */
 #pagetitle {
   color: darkmagenta;
 }
 
+/* questions have a grey background and black text */
 #qd {
   color: black;
   font-size: large;
   background-color: gainsboro;
 }
 
+/* timer background is cyan and text is white */
 #timer {
   background-color: darkcyan;
   color: white;
   font-size: 20px;
 }
 
+/* score background is cyan and text is also white */
 #score {
   background-color: darkcyan;
   color: white;
   font-size: 20px;
 }
 
+/* answer choices turn purple when hovered over */
 .option:hover {
   color: white;
   background-color: blueviolet;
@@ -39,6 +46,7 @@
   font-size: large;
 }
 
+/* scores list is lightcyan background and black text */
 #scores {
   background-color: lightcyan;
   color: black;
