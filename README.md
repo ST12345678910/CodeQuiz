@@ -11,7 +11,7 @@ scores without entering the game.
 ### [Deployed Site](https://st12345678910.github.io/CodeQuiz/)
 
 <p align="center">
-  <p>Desktop>
+  Desktop
   <img src="Assets/demopic1.png" />
 </p>
 <p align="center">
