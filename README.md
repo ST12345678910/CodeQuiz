@@ -12,5 +12,7 @@ scores without entering the game.
 <p align="center">
   <img src="Assets/demopic1.png" />
 </p>
-![CodeQuiz](Assets/demopic1.png)
-![CodeQuiz](Assets/demopic2.png)
+<p align="center">
+  <img src="Assets/demopic2.png" />
+</p>
+
