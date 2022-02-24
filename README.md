@@ -9,5 +9,5 @@ during game play the user can restart the game. There is also a
 scores without entering the game. 
 
 ### [Deployed Site](https://st12345678910.github.io/CodeQuiz/)
-![CodeQuiz](Assets/demopic1.png)
+![CodeQuiz](Assets/demopic1.png | width=100)
 ![CodeQuiz](Assets/demopic2.png)
