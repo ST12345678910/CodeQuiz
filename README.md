@@ -9,8 +9,10 @@ during game play the user can restart the game. There is also a
 scores without entering the game. 
 
 ### [Deployed Site](https://st12345678910.github.io/CodeQuiz/)
+
 <p align="center">
-  <img src="Assets/demopic1.png" />Desktop</img>
+  <p>Desktop>
+  <img src="Assets/demopic1.png" />
 </p>
 <p align="center">
   <img src="Assets/demopic2.png" />
