@@ -53,7 +53,7 @@ function quizCompleted() {
 
 //stringifies the users score and adds it to local storage plus console log, the users score is taken from the completion of the quiz, and the initials are entered
 
-document.getElementById('submit').addEventListener('click', function (event) {
+document.getElementById('submit').addEventListener('click', (event) => {
     var highScore = {
       time: timer,
       initials: document.getElementById('highScore').value
@@ -70,17 +70,17 @@ document.getElementById('submit').addEventListener('click', function (event) {
     }
     var scores = JSON.parse(localStorage.getItem("score"))
     scores.forEach(function (score) {
-        document.getElementById('scores').innerHTML += `
+      document.getElementById('scores').innerHTML += `
 ${score.initials}
 ${score.time}
 <hr></hr>
     `
-      })
+    })
   })
 
 // if the option is correct, then it is console logged, and the score and next question are shown, if the answer is wrong then 10 seconds are subtracted from the timer and Incorrect will appear in the console
 
-document.addEventListener("click", function (event) {
+document.addEventListener("click", (event) => {
     if (event.target.classList.contains("option")) {
       if (event.target.dataset.option == event.target.dataset.answer) {
         console.log("Correct!")
@@ -116,43 +116,43 @@ function timerFunction() {
 // remove start button when it is pressed, show questions. clears all but reset button
 
   var clearTimer
-document.getElementById("start").addEventListener('click', function (event) {
+document.getElementById("start").addEventListener('click', (event) => {
     document.getElementById('start').classList.add('hidden')
     document.getElementById('qo').classList.remove("hidden")
     displayScore()
     clearTimer = setInterval(timerFunction, 1000)
     showQues()
-  document.getElementById('seeScores').classList.add('hidden')
-  document.getElementById('scores').classList.add('hidden')
-  document.getElementById('resetPage').classList.remove("hidden")
+    document.getElementById('seeScores').classList.add('hidden')
+    document.getElementById('scores').classList.add('hidden')
+    document.getElementById('resetPage').classList.remove("hidden")
   })
 
 // takes values from local storage and displays them for the user when they press the "see score" button
 
-document.getElementById('seeScores').addEventListener('click', function (event) {
-  var highScore = {
-    time: timer,
-    initials: document.getElementById('highScore').value
-  }
-  console.log(highScore)
-  if (localStorage.getItem('score')) {
-    var scores = JSON.parse(localStorage.getItem('score'))
-    scores.push(highScore)
-    localStorage.setItem('score', JSON.stringify(scores))
-  } else {
-    var scores = []
-    scores.push(highScore)
-    localStorage.setItem('score', JSON.stringify(scores))
-  }
-  var scores = JSON.parse(localStorage.getItem("score"))
-  scores.forEach(function (score) {
-    document.getElementById('scores').innerHTML += `
+document.getElementById('seeScores').addEventListener('click', (event) => {
+    var highScore = {
+      time: timer,
+      initials: document.getElementById('highScore').value
+    }
+    console.log(highScore)
+    if (localStorage.getItem('score')) {
+      var scores = JSON.parse(localStorage.getItem('score'))
+      scores.push(highScore)
+      localStorage.setItem('score', JSON.stringify(scores))
+    } else {
+      var scores = []
+      scores.push(highScore)
+      localStorage.setItem('score', JSON.stringify(scores))
+    }
+    var scores = JSON.parse(localStorage.getItem("score"))
+    scores.forEach(function (score) {
+      document.getElementById('scores').innerHTML += `
 ${score.initials}
 ${score.time}
 <hr></hr>
     `
+    })
   })
-})
 
 // reloads the whole page when the reset button is pressed
 
